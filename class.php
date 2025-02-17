@@ -39,7 +39,7 @@ class Usuario {
 
                     // Envia o email de ativação
                     require "email/PHPMailer/PHPMailer/php-mailer/PHPMailerAutoload.php";             
-                    $senha2 = "axtbztdkuemphpll"; 
+                    $senha2 = "********"; 
 
                     $mail = new PHPMailer();    
                     $body = "";   
@@ -62,7 +62,7 @@ class Usuario {
                     $mail->SMTPSecure = 'tls';
                     $mail->Username = 'vinicius.bispo013@gmail.com';
                     $mail->Password = $senha2;
-                    $mail->setFrom('vinicius.bispo013@gmail.com', "Loja013");     
+                    $mail->setFrom('vinicius.bispo013@gmail.com', "Gerenciador de eventos");     
                     $mail->addAddress($this->email, 'Contato');
                     $mail->Port = 587;    
                     $mail->isHTML(true);
@@ -329,7 +329,7 @@ class Usuario {
      
     require "email/PHPMailer/PHPMailer/php-mailer/PHPMailerAutoload.php";            
 
-                    $senha2 = "axtbztdkuemphpll"; 
+                    $senha2 = "*******"; 
 
                     $mail = new PHPMailer();    
                     $body = "";   
@@ -352,7 +352,7 @@ class Usuario {
                     $mail->SMTPSecure = 'tls';
                     $mail->Username = 'vinicius.bispo013@gmail.com';
                     $mail->Password = $senha2;
-                    $mail->setFrom('vinicius.bispo013@gmail.com', "Loja013");     
+                    $mail->setFrom('vinicius.bispo013@gmail.com', "Gerenciador de eventos");     
                     $mail->addAddress($email, 'Contato');   
                     $mail->Port = 587;    
                     $mail->isHTML(true);
