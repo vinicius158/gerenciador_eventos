@@ -56,9 +56,15 @@ if(imagem.files.length > 0){
 
    }else{  
     
-    if(data.length > 0){
+    if(data.length > 0){   
+
+    let data_atual = new Date();    
+
+    data_atual.setHours(0, 0, 0, 0);     
+      
+    let data_fornecida = new Date(data+'T00:00:00');     
     
-    if(new Date(data) > new Date()){
+    if(data_fornecida > data_atual){
 
     let form = document.querySelector("#form");     
 
