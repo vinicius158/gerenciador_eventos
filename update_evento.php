@@ -10,11 +10,82 @@
     <script src="https://kit.fontawesome.com/b9092d7591.js" crossorigin="anonymous"></script>      
 </head>
 <body>        
-    <?php      
+    <?php     
 
-    session_start();       
+    if(isset($_GET["id_usuario"])){         
 
-    $_SESSION["id_evento"] = addslashes($_GET["id"]);        
+        session_start();     
+    
+        require_once("class.php");        
+        
+        require_once("conector.php");    
+        
+        $id_usuario = addslashes($_GET["id_usuario"]);      
+        
+        $obj = new Usuario;     
+    
+        $response = $obj->verificar($BD,$id_usuario);            
+        
+        if($response == "ativo"){            
+    
+        $sql = "SELECT nome FROM usuario WHERE id_usuario = :id_usuario";         
+    
+        $comand = $BD->prepare($sql);      
+    
+        $comand->bindValue(":id_usuario",$id_usuario);      
+        
+        $comand->execute();             
+        
+        $count = $comand->rowCount();      
+    
+        if($count > 0){
+    
+        $response2 = $comand->fetch(PDO::FETCH_ASSOC);        
+        
+        $_SESSION["nome"] = $response2["nome"];            
+        
+        $_SESSION["id_usuario"] = $id_usuario;              
+    
+        echo "<script>alert('Sua conta foi ativada !!!')</script>";       
+        
+        }else{
+    
+        header("Location:login.php"); 
+    
+        }
+    
+        } 
+    
+        else    
+    
+        if($response == "erro"){
+    
+        header("Location:login.php");    
+    
+        }     
+    
+        else 
+        
+        if($response == "url"){
+    
+        header("Location:login.php");     
+    
+        }
+        
+        }else{  
+    
+         session_start();    
+         
+         if(!isset($_SESSION["nome"])){
+    
+          header("Location:login.php");                      
+    
+         }         
+
+         $_SESSION["id_evento"] = addslashes($_GET["id"]);       
+    
+    
+        }  
     
     ?>   
     <header>
