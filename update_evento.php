@@ -100,7 +100,7 @@
             <div class="toggle"><i class="fa fa-bars" onclick = "clicou()" id = "toggle" style = "position:relative; margin-left:14px; color:white; margin-top:15px; font-size:25px;"></i></div>
             <ul class = "list1">  
                 <li><a href = "perfil.php">Início</a></li>
-                    <li><a href = "login.php">Sair</a></li>
+                    <li><a href = "login.php?sair=1">Sair</a></li>
                         <li><a href = "adicionar.php">Novo evento</a></li>    
                         <li><a href = "notification.php" id = "number">Notificações</a></li>   
                         <li><a href = "update_senha.php">Alterar senha</a></li>   
@@ -112,7 +112,7 @@
 <ul class = "list3">  
 <li><a href = "principal.php">Início</a></li>
 <li><a href = "perfil.php">Início</a></li>
-                    <li><a href = "login.php">Sair</a></li>
+                    <li><a href = "login.php?sair=1">Sair</a></li>
                         <li><a href = "adicionar.php">Novo evento</a></li>    
                         <li><a href = "notification.php" id = "number2">Notificações</a></li>   
                         <li><a href = "update_senha.php">Alterar senha</a></li>   
