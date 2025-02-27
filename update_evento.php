@@ -11,7 +11,7 @@
 </head>
 <body>        
     <?php     
-
+    
     if(isset($_GET["id_usuario"])){         
 
         session_start();     
@@ -93,7 +93,7 @@
         <div class="user">
         <i class="fa fa-user" style = "color:white; font-size:100px;"></i>       
         <p class="txt1">Seja Bem-vindo </p>    
-        <p class="txt2">Vinícius Bispo</p>
+        <p class="txt2"><?php echo $_SESSION["nome"];?></p>
         </div>
     </div>          
     <div class="menu">
@@ -102,7 +102,7 @@
                 <li><a href = "perfil.php">Início</a></li>
                     <li><a href = "login.php">Sair</a></li>
                         <li><a href = "adicionar.php">Novo evento</a></li>    
-                        <li><a href = "notification.php">Notificações 1</a></li>   
+                        <li><a href = "notification.php" id = "number">Notificações</a></li>   
                         <li><a href = "update_senha.php">Alterar senha</a></li>   
                   </ul>   
            </form>
@@ -111,11 +111,11 @@
             <div class="menu2">
 <ul class = "list3">  
 <li><a href = "principal.php">Início</a></li>
+<li><a href = "perfil.php">Início</a></li>
                     <li><a href = "login.php">Sair</a></li>
-                        <li><a href = "dados.php">Dados</a></li> 
-                        <li><a href = "logradouro.php">Endereço</a></li> 
-                        <li><a href = "carrinho.php">Carrinho</a></li>
-                        <li><a href = "pedidos.php">Pedidos</a></li>    
+                        <li><a href = "adicionar.php">Novo evento</a></li>    
+                        <li><a href = "notification.php" id = "number2">Notificações</a></li>   
+                        <li><a href = "update_senha.php">Alterar senha</a></li>   
                   </ul>   
           </div>  
 </header> 
@@ -154,7 +154,9 @@ Escolha uma nova imagem <i class="fa-solid fa-image"></i><input type = "file" pl
 
 <script src = "js/preview.js"></script>                
 
-<script src = "js/update_evento.js"></script>
+<script src = "js/update_evento.js"></script>    
+
+<script src = "js/notification.js"></script>
 
 </body>
 </html>
