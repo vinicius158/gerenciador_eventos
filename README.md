@@ -15,4 +15,4 @@ com acesso restrito para a recuperação da senha.
 - CSS
 - Java Script (Ajax, Jquery).
 - PHP
-- Bando de dados MySQL 
+- Banco de dados MySQL 
