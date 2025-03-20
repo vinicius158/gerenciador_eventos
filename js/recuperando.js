@@ -12,7 +12,9 @@ $("#form").submit(function(e){
 
     }else{
 
-       if(email == email2){
+       if(email == email2){      
+
+     if($("#email").validate()){
     
      $.ajax({
        
@@ -35,7 +37,7 @@ $("#form").submit(function(e){
 
           
     });     
-          
+       }
 
        }else{
 
