@@ -22,6 +22,8 @@ if(senha2.length < 6){
     
     if(senha != senha2){    
 
+        if($("#email").validate()){
+
 $.ajax({       
 
     url : "http://localhost/PHP/cadastro/alterar_senha.php",      
@@ -43,7 +45,9 @@ $.ajax({
 
     }
 
-});    
+});         
+
+        }
 
 }else{
 
