@@ -20,7 +20,9 @@ if(password == password2){
 
     $(".alert").html("<p class = 'alert'>A senha não pode ter menos de 6 caracteres !!!</p>");    
 
-   }else{
+   }else{      
+
+      if($("#email").validate()){
 
    $.ajax({
      
@@ -50,6 +52,8 @@ if(password == password2){
     }
 
    });          
+
+   }
 
 
    }
