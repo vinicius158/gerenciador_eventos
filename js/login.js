@@ -11,7 +11,9 @@ if(email.length === 0 || senha.length === 0 ){
 $(".alert").html("<p class = 'alert'>Preencha todos os campos !!! </p>");    
 
 
-}else{
+}else{        
+
+   if($("#email").validate()){
 
 $.ajax({
    
@@ -54,6 +56,7 @@ $(".alert").html("<p class = 'alert'>Essa conta não foi verificada !!!</p>");
 
 });     
 
+}
 
 
 }
