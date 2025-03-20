@@ -21,7 +21,9 @@ if(senha.length < 6){
 
 $(".alert").html("<p class = 'alert'>A senha precisa ter no mínimo 6 caracteres </p>");  
 
-}else{
+}else{      
+
+    if($("#email").validate()){
 
 $.ajax({
 
@@ -55,6 +57,8 @@ $.ajax({
 
 
 });         
+
+}
 
 
 }     
